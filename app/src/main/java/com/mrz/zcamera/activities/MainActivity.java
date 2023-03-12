@@ -93,7 +93,7 @@ public class MainActivity extends Activity {
 			initializeCreate();
 		}
 	}
-	//
+	
 
    private void initializeVars(Bundle savedInstanceState) {
 		
@@ -241,7 +241,7 @@ public class MainActivity extends Activity {
         
        
 	 }
-	 //
+	 
 	private void initializeCreate() {
 		 getActionBar().hide();
 		
@@ -342,7 +342,7 @@ public class MainActivity extends Activity {
 			break;
 		}
 	}
-	//
+	
 	//On Activity becoming visible
 	@Override
 	public void onStart() {
@@ -389,7 +389,7 @@ public class MainActivity extends Activity {
 		//close camera for future usage
 		zcameraView.close();
 	}
-	//
+	
 	
     //Camera Params
     public static void setParameters() {
@@ -434,7 +434,7 @@ zcameraView.cam.setParameters(pm);
 			
 		};
 	}
-	//
+	
 	//end
 	private void randomFileName (final String pref) {
 	//generate random file name for picture, base on Time and Seconds
