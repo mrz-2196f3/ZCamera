@@ -94,7 +94,9 @@ public class MainActivity extends Activity {
 		}
 	}
 	
-
+   /**Base on we need user to grant the permission first
+   *i added some void, to use it as user granted permission
+   **/
    private void initializeVars(Bundle savedInstanceState) {
 		
 		//Layout initializing
@@ -331,7 +333,7 @@ public class MainActivity extends Activity {
 			
 		});
 	}
-     //
+     
      @Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
@@ -394,10 +396,10 @@ public class MainActivity extends Activity {
     //Camera Params
     public static void setParameters() {
 
-android.hardware.Camera.Parameters pm = zcameraView.cam.getParameters()
-;
-pm.setJpegQuality(picture_quality)
-;
+android.hardware.Camera.Parameters pm = zcameraView.cam.getParameters();
+
+pm.setJpegQuality(picture_quality);
+
 //pm.setPreviewFpsRange(20,45);
 
 pm.setPictureFormat(ImageFormat.JPEG);
@@ -415,7 +417,7 @@ zcameraView.cam.setParameters(pm);
 
       
     }
-    //
+    
 	//end
  private void savePicture (final View v) {
 		randomFileName("Pitik");
@@ -510,7 +512,7 @@ zcameraView.cam.setParameters(pm);
 		_delay.scheduleAtFixedRate(countDown, (int)(0), (int)(1000));
 	}
 	
-	//I was coded it here because it is Static class
+	//I was coded it here because some its functions is in this Activity.
 	
 	public static class ZCameraView extends android.widget.FrameLayout {
 
@@ -1044,8 +1046,8 @@ setParameters();
 	}
 	}
 		@Deprecated
-	public float getDip(int _input){
-		return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, _input, getResources().getDisplayMetrics());
+	public float getDip(int input){
+		return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, input, getResources().getDisplayMetrics());
 	}
 	
 
